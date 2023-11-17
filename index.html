@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Number Base converter</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="keywords" content="Number base converter" />
+  <meta name="description" content="Number base converter" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <!--<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400..700&display=swap" rel="stylesheet" />-->
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+    <div class="grid__container">
+        <header calss="header">
+            <h1 class="header__title">Number Base converter</h1>
+        </header>
+        <main class="main">
+            <label class="input__title" for="enterNumber">Enter a Number:</label>
+            <input class="input__number" type="text" id="enterNumber" />
+            <label class="selector__title" for="base">Convert to:</label>
+            <select class="selector__choseBase" id="base" name="base">
+                <option value="2">Binary</option>
+                <option value="8">Octal</option>
+                <option value="16">Hexa Decimal</option>
+            </select>
+            <button id="btn">Convert</button>
+            <span id="resultValue"></span>
+        </main>
+        <footer class="attribution">
+            <span>Own challenge</span><br/> 
+            <span>Coded by Darionas</span>
+        </footer>
+    </div>
+</body>
+<script src="index.js"></script>
+</html>
