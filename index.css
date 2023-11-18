@@ -1,4 +1,142 @@
 
+:root {
+    /* Primary Color */
+    --dark-brown: #212121;
+    --dark-grey: #424242;
+
+    /* Neutral Colors */
+    --greem: #008000;
+    --orange-red: #FF4500;
+    --black: #212121;
+    --white: #ffffff;
+
+
+    /* fonts */
+    --ff-primary: 'Roboto', sans-serif;
+    --fw-400: 400; /* base */
+    --fw-700: 700;
+    --fs-16: 1rem; /* 16px base */
+
+}
+
+
+body {
+    font-family: var(--ff-primary);
+    font-weight: var(--fw-400);
+    font-size: var(--fs-16);
+    background-color: var(--dark-brown);
+}
+
+/*----------------Mobile layout--------------------*/
+.grid__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        'header'
+        'main'
+        'attribution';
+    justify-items: center; 
+    margin: 10% 0 0 0;
+}
+
+.show {
+    visibility: visible !important;
+}
+
+.header__title {
+    display: none;
+}
+
+.main {
+    background-color: var(--dark-grey);
+    max-width: 18rem;
+    /*border: 2px solid white;*/
+}
+
+.main__title {
+    font-size: 1.4rem;
+    text-align: center;
+    color: var(--white);
+    padding: 1.5rem 1rem 0 1rem;
+}
+
+.form {
+    display: grid;
+    grid-template-columns: 1fr 0.3fr;
+    grid-template-areas:
+        'input__title input__error-image'
+        'input__number input__number'
+        'input__error .'
+        'selector__title selector__title'
+        'selector__choseBase selector__choseBase'
+        'btn btn'
+        'reset reset'
+        'resultValue resultValue';
+    padding: 2rem;
+    position: relative;
+    /*border: 2px solid white;*/
+}
+
+.input__title {
+    color: var(--white);
+}
+
+.mandatory {
+    color: var(--orange-red);
+}
+
+#input__error-image {
+    width: 1.2rem;
+    justify-self: end;
+    position: absolute;
+    top: 1.7rem;
+    right: .3rem;
+    visibility: hidden;
+}
+
+.input__number {
+    padding: .4rem;
+}
+
+#input__error {
+    visibility: hidden;
+    color: var(--orange-red);
+    font-size: .6rem;
+}
+
+.selector__title {
+    color: var(--white);
+    margin: 1rem 0 0 0;
+}
+
+.selector__choseBase {
+    padding: .4rem;
+
+}
+
+#btn {
+    margin: 2.5rem 0 0 0;
+    padding: .4rem;
+    background-color: var(--black);
+    border: none;
+    color: var(--white);
+}
+
+#reset {
+    margin: .7rem 0 0 0;
+    padding: .4rem;
+    background-color: var(--black);
+    border: none;
+    color: var(--white);
+}
+
+#resultValue {
+    color: var(--greem);
+    margin: 2rem 0 0 0;
+    font-weight: var(--fw-700);
+    /*visibility: hidden;*/
+}
+
 .attribution { 
     font-size: 0.6875rem;
     position: relative;
@@ -9,4 +147,69 @@
     color: rgb(3, 146, 248);
     width: 75%;
     align-self: center;
+}
+
+
+/*---------------------Desktop layout-------------------------*/
+@media screen and (min-width: 48rem) {
+
+    .input__number:hover,
+    .selector__choseBase:hover,
+    #btn {
+        cursor: pointer;
+    }
+    
+    
+
+
+}
+
+/*-------grid area names--------------------*/
+
+.header {
+    grid-area: header;
+}
+
+.main {
+    grid-area: main;
+}
+
+.input__title {
+    grid-area: input__title;
+}
+
+#input__error-image {
+    grid-area: input__error-image;
+}
+
+.input__number {
+    grid-area: input__number;
+}
+
+#input__error {
+    grid-area: input__error;
+}
+
+.selector__title {
+    grid-area: selector__title;
+}
+
+.selector__choseBase {
+    grid-area: selector__choseBase;
+}
+
+#btn {
+    grid-area: btn;
+}
+
+#reset {
+    grid-area: reset;
+}
+
+#resultValue {
+    grid-area: resultValue;
+}
+
+.attribution {
+    grid-area: attribution;
 }

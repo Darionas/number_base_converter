@@ -17,9 +17,13 @@
 
 - [x] Create of repo (1st task)
 - [x] Create HTML layout (2nd task)
-- [ ] Create CSS layout according style guides (3rd task)
-- [ ] Create grid layout for mobile first (4th task)
-- [ ] Craete grid layout for desktop (5th task)
-- [ ] Implement JavaScript (6th task)
-- [ ] Overview of solution and RWD (7th task)
-- [ ] Tada it is done. Congratulation you reach your goal.🎉
+- [x] Create CSS layout according style guides (3rd task)
+- [x] Create grid layout for mobile first (4th task)
+- [x] Craete grid layout for desktop (5th task)
+- [x] Implement JavaScript (6th task)
+- [x] Overview of solution and RWD (7th task)
+- [x] Tada it is done. Congratulation you reach your goal.🎉
+
+## License
+
+MIT license
