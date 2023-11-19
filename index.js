@@ -20,7 +20,8 @@ btn.addEventListener('click', function(e) {
         input_error.textContent = 'Please enter a valid number.'
         result.textContent = '';
     } else {
-        if(num == '') {
+    console.log(num);
+        if(num == '' || num == undefined || num == null) {
             input_number.setAttribute('placeholder', '0');
         }
         let convertedValue;
