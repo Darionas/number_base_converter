@@ -20,6 +20,9 @@ btn.addEventListener('click', function(e) {
         input_error.textContent = 'Please enter a valid number.'
         result.textContent = '';
     } else {
+        if(num == '') {
+            input_number.setAttribute('placeholder', '0');
+        }
         let convertedValue;
         input_error.classList.remove('show');
         error_image.classList.remove('show');
